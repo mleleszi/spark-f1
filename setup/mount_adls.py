@@ -24,7 +24,3 @@ def mount_adls(container_name):
 # COMMAND ----------
 
 mount_adls('raw')
-
-# COMMAND ----------
-
-dbutils.fs.ls('/mnt/marcidev/raw')
