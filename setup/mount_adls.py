@@ -28,7 +28,3 @@ mount_adls('raw')
 # COMMAND ----------
 
 dbutils.fs.ls('/mnt/marcidev/raw')
-
-# COMMAND ----------
-
-
