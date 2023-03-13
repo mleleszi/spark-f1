@@ -1,0 +1,302 @@
+schema:
+    circuits:
+        circuitId:
+            type: int
+            nullable: false
+        circuitRef:
+            type: int
+            nullable: false
+        name: 
+            type: string
+            nullable: false
+        location:
+            type: string
+            nullable: true
+        country:
+            type: string
+            nullable: true
+        lat: 
+            type: float
+            nullable: true
+        lng: 
+            type: float
+            nullable: true
+        alt: 
+            type: int
+            nullable: true
+        url: 
+            type: string
+            nullable: false
+    constructors:
+        constructorId:
+            type: int
+            nullable: false 
+        constructorRef:
+            type: string
+            nullable: false
+        name:
+            type: string
+            nullable: false 
+        nationality:
+            type: string
+            nullable: true
+        url:
+            type: string
+            nullable: false 
+    drivers:
+        driverId:
+            type: int
+            nullable: false 
+        driverRef:
+            type: string
+            nullable: false
+        number:
+            type: int
+            nullable: true 
+        code:
+            type: string
+            nullable: true
+        forename:
+            type: string
+            nullable: false
+        surname:
+            type: string
+            nullable: false 
+        dob:
+            type: date
+            nullable: true
+        nationality:
+            type: string
+            nullable: true 
+        url:
+            type: string
+            nullable: false
+    lap_times:
+        raceId:
+            type: int
+            nullable: false 
+        driverId:
+            type: int
+            nullable: false
+        lap:
+            type: int
+            nullable: false 
+        position:
+            type: int
+            nullable: true
+        time:
+            type: string
+            nullable: true
+        milliseconds:
+            type: int
+            nullable: true 
+    pit_stops:
+        raceId:
+            type: int
+            nullable: false 
+        driverId:
+            type: int
+            nullable: false
+        stop:
+            type: int
+            nullable: false 
+        lap:
+            type: int
+            nullable: true
+        time:
+            type: string
+            nullable: true
+        duration:
+            type: string
+            nullable: true 
+        milliseconds:
+            type: int
+            nullable: true
+    qualifying:
+        qualifyId:
+            type: int
+            nullable: false 
+        raceId:
+            type: int
+            nullable: false
+        driverId:
+            type: int
+            nullable: false 
+        constructorId:
+            type: int
+            nullable: false
+        number:
+            type: int
+            nullable: false
+        position:
+            type: int
+            nullable: true 
+        q1:
+            type: string
+            nullable: true
+        q2:
+            type: string
+            nullable: true
+        q3:
+            type: string
+            nullable: true
+    races:
+        raceId:
+            type: int
+            nullable: false 
+        year:
+            type: int
+            nullable: false
+        round:
+            type: int
+            nullable: false 
+        circuitId:
+            type: int
+            nullable: false
+        name:
+            type: string
+            nullable: false
+        date:
+            type: string
+            nullable: false 
+        time:
+            type: string
+            nullable: true 
+        url:
+            type: string
+            nullable: true
+        fp1_date:
+            type: date
+            nullable: true
+        fp1_time:
+            type: string
+            nullable: true
+        fp2_date:
+            type: date
+            nullable: true
+        fp2_time:
+            type: string
+            nullable: true
+        fp3_date:
+            type: date
+            nullable: true
+        fp3_time:
+            type: string
+            nullable: true
+        quali_date:
+            type: date
+            nullable: true
+        quali_time:
+            type: string
+            nullable: true
+        sprint_date:
+            type: date
+            nullable: true
+        sprint_time:
+            type: string
+            nullable: true
+    results:
+        resultId:
+            type: int
+            nullable: false 
+        raceId:
+            type: int
+            nullable: false
+        constructorId:
+            type: int
+            nullable: false 
+        number:
+            type: int
+            nullable: true
+        grid:
+            type: int
+            nullable: false
+        position:
+            type: int
+            nullable: true 
+        positionText:
+            type: string
+            nullable: false 
+        positionOrder:
+            type: int
+            nullable: false
+        points:
+            type: float
+            nullable: false
+        laps:
+            type: int
+            nullable: false
+        time:
+            type: string
+            nullable: true
+        milliseconds:
+            type: int
+            nullable: true
+        fastestLap:
+            type: int
+            nullable: true
+        rank:
+            type: int
+            nullable: true
+        fastestLapTime:
+            type: string
+            nullable: true
+        fastestLapSpeed:
+            type: string
+            nullable: true
+        statusId:
+            type: int
+            nullable: false
+    sprint_results:
+        sprintResultId:
+            type: int
+            nullable: false 
+        raceId:
+            type: int
+            nullable: false
+        constructorId:
+            type: int
+            nullable: false 
+        number:
+            type: int
+            nullable: true
+        grid:
+            type: int
+            nullable: false
+        position:
+            type: int
+            nullable: true 
+        positionText:
+            type: string
+            nullable: false 
+        positionOrder:
+            type: int
+            nullable: false
+        points:
+            type: float
+            nullable: false
+        laps:
+            type: int
+            nullable: false
+        time:
+            type: string
+            nullable: true
+        milliseconds:
+            type: int
+            nullable: true
+        fastestLap:
+            type: int
+            nullable: true
+        fastestLapTime:
+            type: string
+            nullable: true
+        statusId:
+            type: int
+            nullable: false
+    status:
+        statusId:
+            type: int
+            nullable: false
+        status:
+            type: string
+            nullable: false
