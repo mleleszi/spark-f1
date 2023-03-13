@@ -202,6 +202,9 @@ schema:
         raceId:
             type: int
             nullable: false
+        driverId:
+            type: int
+            nullable: false
         constructorId:
             type: int
             nullable: false 
@@ -254,6 +257,8 @@ schema:
         raceId:
             type: int
             nullable: false
+        
+        
         constructorId:
             type: int
             nullable: false 

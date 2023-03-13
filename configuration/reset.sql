@@ -6,3 +6,7 @@ DROP CATALOG IF EXISTS marci_dev CASCADE
 -- MAGIC %fs
 -- MAGIC 
 -- MAGIC rm -r /user/marcell.leleszi@datapao.com/f1/_checkpoint
+
+-- COMMAND ----------
+
+-- MAGIC %run ./create_catalog_and_schema
