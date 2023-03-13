@@ -47,13 +47,13 @@ def merge_delta(df, table_name, merge_condition):
   if (spark.catalog.tableExists(table_name)):
     delta_table = DeltaTable.forName(spark, table_name)
     (delta_table
-              .alias("target")
-              .merge(df.alias("source"), merge_condition) 
+              .alias('target')
+              .merge(df.alias('source'), merge_condition) 
               .whenMatchedUpdateAll()
               .whenNotMatchedInsertAll()
               .execute())
   else:
-    df.saveAsTable(table_name)
+    df.write.saveAsTable(table_name)
 
 # COMMAND ----------
 
