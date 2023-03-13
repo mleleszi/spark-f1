@@ -41,4 +41,20 @@ def add_string_time_to_date(df, date_col, time_col, new_col_name):
 
 # COMMAND ----------
 
+from delta.tables import DeltaTable
+
+def merge_delta(df, table_name, merge_condition):
+  if (spark.catalog.tableExists(table_name)):
+    delta_table = DeltaTable.forName(spark, table_name)
+    (delta_table
+              .alias("target")
+              .merge(df.alias("source"), merge_condition) 
+              .whenMatchedUpdateAll()
+              .whenNotMatchedInsertAll()
+              .execute())
+  else:
+    df.saveAsTable(table_name)
+
+# COMMAND ----------
+
 
